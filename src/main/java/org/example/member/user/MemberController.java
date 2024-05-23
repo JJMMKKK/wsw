@@ -1,5 +1,6 @@
 package org.example.member.user;
 
+import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.example.beforeLogin.MemberVO;
@@ -17,7 +18,7 @@ public class MemberController {
     private final MemberService memberService;
 
     //비밀번호 변경
-    @PostMapping("/changePasswordPage")
+    @PostMapping("/changePassword")
     public String changePasswordPage(Principal principal, String password) {
         String username = principal.getName();
         boolean updateComplete = memberService.updatePassword(username, password);

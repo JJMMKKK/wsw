@@ -9,5 +9,4 @@ public interface MemberRepository extends JpaRepository<MemberVO, Long> {
     MemberVO findByUsername(String username);
     boolean existsByUsername(String username);
     void deleteByUsername(String username);
-    void saveByUsername(String username, MemberVO memberVO);
 }
