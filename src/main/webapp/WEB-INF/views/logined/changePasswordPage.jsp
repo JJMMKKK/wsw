@@ -13,7 +13,11 @@
 </head>
 <body>
 
-<h1>옷 관리 페이지</h1>
+<h1>비밀번호 변경 페이지</h1>
+<form id="changePasswordForm" action="<c:url value='/changePasswordPage'/>" method="post">
+    <input type="text" id="newPassword" name="newPassword">
+    <input type="submit" value="비밀번호 변경">
+</form>
 <form id="myPageForm" action="<c:url value='/goMyPage'/>" method="post">
     <input type="submit" value="마이페이지">
 </form>

@@ -13,15 +13,14 @@
 </head>
 <body>
 
-<h1>Find ID Page</h1>
-<form id="clothEditForm" action="<c:url value='/goClothEditPage'/>" method="post">
-    <input type="submit" value="옷 관리">
-</form>
-<form id="changePasswordForm" action="<c:url value='/goChangePasswordPage'/>" method="post">
-    <input type="submit" value="비밀번호 변경">
-</form>
-<form id="changeEmailtForm" action="<c:url value='/goChangeEmailPage'/>" method="post">
-    <input type="submit" value="이메일 변경">
+<h1>옷 관리 페이지</h1>
+
+옷 출력
+옷 추가
+옷 삭제
+
+<form id="myPageForm" action="<c:url value='/goMyPage'/>" method="post">
+    <input type="submit" value="마이페이지">
 </form>
 <form id="logoutForm" action="<c:url value='/logout'/>" method="post">
     <input type="submit" value="로그아웃">

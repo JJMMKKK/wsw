@@ -13,7 +13,12 @@
 </head>
 <body>
 
-<h1>Main Page</h1>
+<h1>아이디 확인</h1>
+
+<p>
+    고객님의 아이디는 ${username} 입니다.
+</p>
+
 <p>
     <a href="<c:url value='/loginPage'/>">로그인 화면</a>
 </p>

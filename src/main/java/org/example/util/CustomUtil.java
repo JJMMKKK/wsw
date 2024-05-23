@@ -1,8 +1,11 @@
 package org.example.util;
 
+import org.springframework.stereotype.Component;
+
 import java.util.Random;
 
-public class Util {
+@Component
+public class CustomUtil {
 
     public String createTemporaryPassword(int length){
 

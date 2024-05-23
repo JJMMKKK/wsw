@@ -13,8 +13,8 @@
 </head>
 <body>
 
-<h1>Find Password Page</h1>
-<form id="findPWForm" action="<c:url value='/findbyUsernameAndEmail'/>" method="post">
+<h1>임시 비밀번호 발급 페이지</h1>
+<form id="findPWForm" action="<c:url value='/findPassword'/>" method="post">
     <input type="text" id="username" name="username">
     <input type="email" id="email" name="email">
     <input type="submit" value="확인">

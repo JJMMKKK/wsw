@@ -1,4 +1,4 @@
-package org.member.springSecurity.jjwt;
+package org.example.springSecurity.jjwt;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jws;

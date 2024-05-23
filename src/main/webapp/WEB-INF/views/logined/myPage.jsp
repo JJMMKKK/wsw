@@ -13,11 +13,20 @@
 </head>
 <body>
 
-<h1>Main Page</h1>
-<p>
-    
-    <a href="<c:url value='/loginPage'/>">로그아웃</a>
-</p>
+<h1>마이 페이지</h1>
+<form id="clothEditForm" action="<c:url value='/clothEditPage'/>" method="post">
+    <input type="submit" value="옷 관리">
+</form>
+<form id="changePasswordForm" action="<c:url value='/changePasswordPage'/>" method="post">
+    <input type="submit" value="비밀번호 변경">
+</form>
+<form id="withdrawUserForm" action="<c:url value='/withdrawUser'/>" method="post">
+    <input type="submit" value="회원 탈퇴">
+</form>
+
+<form id="logoutForm" action="<c:url value='/logout'/>" method="post">
+    <input type="submit" value="로그아웃">
+</form>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"

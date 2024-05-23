@@ -1,4 +1,4 @@
-package org.example.member;
+package org.example.beforeLogin;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;

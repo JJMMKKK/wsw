@@ -13,10 +13,9 @@
 </head>
 <body>
 
-<h1>Weather and Dust Main Page</h1>
-
+<h1>Main Page</h1>
 <p>
-    <jsp:include page="includeData/includeWeatherMain.jsp"/>
+    <a href="<c:url value='/loginPage'/>">로그인 화면</a>
 </p>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"

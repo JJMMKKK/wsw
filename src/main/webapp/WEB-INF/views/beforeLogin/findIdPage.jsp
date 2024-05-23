@@ -13,8 +13,8 @@
 </head>
 <body>
 
-<h1>Find ID Page</h1>
-    <form id="findIdForm" action="<c:url value='/findbyEmail'/>" method="post">
+<h1>아이디 찾기 페이지</h1>
+    <form id="findIdForm" action="<c:url value='/findUsername'/>" method="post">
         <input type="email" id="email" name="email">
         <input type="submit" value="확인">
     </form>

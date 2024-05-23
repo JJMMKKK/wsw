@@ -13,7 +13,7 @@
 </head>
 <body>
 
-<h1>Register Page</h1>
+<h1>회원가입 페이지</h1>
 <form id="registerForm" action="<c:url value='/saveUser'/>" method="post">
     <input type="text" id="username" name="username">
     <input type="text" id="password" name="password">

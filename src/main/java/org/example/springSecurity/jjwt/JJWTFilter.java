@@ -1,4 +1,4 @@
-package org.member.springSecurity.jjwt;
+package org.example.springSecurity.jjwt;
 
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
@@ -7,8 +7,8 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.member.MemberDTO;
-import org.member.springSecurity.system.SpringSecurityUser;
+import org.example.beforeLogin.MemberDTO;
+import org.example.springSecurity.common.SecurityUser;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -46,7 +46,7 @@ public class JJWTFilter extends OncePerRequestFilter {
                 memberDTO.setCountry(country);
                 memberDTO.setArea(area);
 
-            SpringSecurityUser springSecurityUser = new SpringSecurityUser(memberDTO);
+            SecurityUser springSecurityUser = new SecurityUser(memberDTO);
             Authentication authentication = new UsernamePasswordAuthenticationToken(springSecurityUser, null, springSecurityUser.getAuthorities());
             SecurityContextHolder.getContext().setAuthentication(authentication);
         }

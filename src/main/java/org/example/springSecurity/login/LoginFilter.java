@@ -1,14 +1,13 @@
-package org.member.springSecurity.login;
+package org.example.springSecurity.login;
 
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
-import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.member.springSecurity.jjwt.JJWTUtil;
-import org.member.springSecurity.system.SpringSecurityUser;
+import org.example.springSecurity.common.SecurityUser;
+import org.example.springSecurity.jjwt.JJWTUtil;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -39,10 +38,10 @@ public class LoginFilter extends UsernamePasswordAuthenticationFilter {
     @Override
     protected void successfulAuthentication(final HttpServletRequest request, final HttpServletResponse response, final FilterChain chain, Authentication authResult) throws IOException, ServletException {
 
-        SpringSecurityUser springSecurityUser = (SpringSecurityUser) authResult.getPrincipal();
-        String username = springSecurityUser.getUsername();
+        SecurityUser securityUser = (SecurityUser) authResult.getPrincipal();
+        String username = securityUser.getUsername();
 
-        Collection<? extends GrantedAuthority> authorities = springSecurityUser.getAuthorities();
+        Collection<? extends GrantedAuthority> authorities = securityUser.getAuthorities();
         Iterator<? extends GrantedAuthority> authoritiesIterator = authorities.iterator();
         GrantedAuthority grantedAuthority = authoritiesIterator.next();
         String role = grantedAuthority.getAuthority();
